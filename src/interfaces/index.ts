@@ -5,6 +5,7 @@ export interface IRegisterInput {
   validation: {
     required?: boolean;
     minLength?: number;
+    maxLength?: number;
     pattern?: RegExp;
   };
 }

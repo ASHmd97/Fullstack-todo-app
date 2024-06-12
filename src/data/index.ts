@@ -8,6 +8,7 @@ export const REGISTER_FORM: IRegisterInput[] = [
     validation: {
       required: true,
       minLength: 5,
+      maxLength: 15,
     },
   },
   {

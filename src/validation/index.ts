@@ -4,7 +4,8 @@ export const registerSchema = yup
     username: yup
       .string()
       .required("Username is required")
-      .min(5, "Username should be at least 5 charachters"),
+      .min(5, "Username should be at least 5 characters")
+      .max(16, "Username should be at most 16 characters"),
     email: yup
       .string()
       .required("Email is required")
@@ -12,9 +13,11 @@ export const registerSchema = yup
     password: yup
       .string()
       .required("Password is required")
-      .min(6, "Password should be at least 6 charachters."),
+      .min(6, "Password should be at least 6 characters."),
   })
   .required();
+
+  
 export const loginSchema = yup
   .object({
     identifier: yup
@@ -24,6 +27,6 @@ export const loginSchema = yup
     password: yup
       .string()
       .required("Password is required")
-      .min(6, "Password should be at least 6 charachters."),
+      .min(6, "Password should be at least 6 characters."),
   })
   .required();
